@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Roboto"), local("Roboto-Regular"),
+         url("../fonts/roboto-v20-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url("../fonts/roboto-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: "RocketClouds";
+    src: url("../fonts/RocketClouds-Demo.woff") format("woff"),
+      url("../fonts/RocketClouds-Demo.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+@keyframes neon {
+from {
+        text-shadow:
+        0 0 6px rgba(202,228,225,0.92),
+        0 0 30px rgba(202,228,225,0.34),
+        0 0 12px rgba(30,132,242,0.52),
+        0 0 21px rgba(30,132,242,0.92),
+        0 0 34px rgba(30,132,242,0.78),
+        0 0 54px rgba(30,132,242,0.92);
+    }
+    to {
+        text-shadow:
+        0 0 12px rgba(202,228,225,0.98),
+        0 0 50px rgba(202,228,225,0.42),
+        0 0 24px rgba(30,132,242,0.58),
+        0 0 24px rgba(30,132,242,0.84),
+        0 0 60px rgba(30,132,242,0.88),
+        0 0 120px rgba(30,132,242,1);
+    }
+}
+@keyframes rotate {
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+* {
+    font-family: "Roboto", "Arial", sans-serif;
+}
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.main {
+    &__card{
+        background-image: url(../img/backT.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        .logo{
+            width: 12vw;
+            height: 12vh;
+
+        }
+        .logo:hover {
+            animation: rotate 1s ease-in-out alternate;
+            
+        }
+        .nav__list {
+            font-size: 25px;
+            list-style: none;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: -110px;
+        }
+        .nav__list a {
+            color: white;
+            text-decoration: none;
+            transition-duration: 0.5s;
+        }
+        .nav__list a:hover {
+            color: purple;
+            transition-duration: 0.5s;
+        }
+        .nav__list li {
+            display: inline;
+            padding-right: 25px;
+        }
+        .nav__social {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            font-size: 25px;
+            list-style: none;
+        }
+        .nav__social a{
+            color: white;
+            text-decoration: none;
+            transition-duration: 0.5s;
+        }
+        .nav__social a:hover{
+            color: purple;
+            transition-duration: 0.5s;
+            font-size: 50px;
+        }
+        .nav__social li {
+            padding-bottom: 25px;
+        }
+        .main__banner {
+            font-family: "RocketClouds", "Arial", sans-serif;
+            text-transform: capitalize;
+            font-size: 75px;
+            text-align: center;
+            position: relative;
+            top: 8vh;
+            animation: neon .08s ease-in-out infinite alternate;
+        }
+        .up{
+            color: purple;
+        }
+        .down {
+            color: skyblue;
+        }
+        .gurl{
+            width: 25vw;
+            height: 35vh;
+            float: left;
+        }
+        .boii {
+            width: 35vw;
+            height: 35vh;
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+        .bazar {
+            font-family: "vibur";
+            color: mediumslateblue;
+            font-size: 30px;
+            padding-top: 120px;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+    }
+}
